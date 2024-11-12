@@ -3,8 +3,8 @@ import ContactForm from "./Contactform";
 
 export default function ContactInfo(){
     return(
-        <Grid container id="Contact" style={{ height: '100vh', padding: '20px' }}>
-            <Grid item xs={6}>
+        <Grid container id="Contact" style={{ height: '100vh', padding: '20px', backgroundColor: 'rgb(181, 230, 245)' }}>
+            <Grid item xs={6} style={{backgroundColor:"white", padding:'20px'}}>
             <h1>Lets Talk</h1>
                 Email 📩:- shubhamchikane0109@gmail.com <br/>
                 GitHub 💻:- <br />
