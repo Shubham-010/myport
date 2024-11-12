@@ -1,10 +1,41 @@
 .App {
   text-align: center;
 }
+*{
+/* background-color: lightblue; */
+ /* background-image: -moz-radial-gradient(blue,black); */
+}
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.app_bgclr{
+  background-color: rgb(86, 166, 190) !important;
+}
+.des_clr{
+color: #863e9c;
+size: 10rem;
+}
+
+.btn_color{
+  background-color:rgb(86, 166, 190) !important;
+  color: white !important;
+  border-radius: 25%;
+  cursor: pointer;
+  transition: background-color 0.3s ease
+}
+.btn_color:hover{
+  border: 1px solid aqua !important;
+}
+
+.footer_pr{
+        position:fixed; 
+        bottom: 0; 
+        z-index: 999;
+        width: 100%; 
+        background-color:rgb(86, 166, 190);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -28,6 +59,23 @@
   color: #61dafb;
 }
 
+ .margin_main {
+    margin: 5%;
+ }
+ .width_100{
+  max-width:100%;
+ }
+ .Name_sect {
+   display: block;
+   align-items: flex-start;
+   /* styles.css */
+   position: relative;
+   /* z-index: 1; */
+   /* Ensure content is above the bubble background */
+   padding: 20px;
+   text-align: center;
+ }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +83,7 @@
   to {
     transform: rotate(360deg);
   }
+
+
+ 
 }
