@@ -30,16 +30,18 @@ export default function FirstPl(params) {
         link.click();
     }
     return(
-        <div>
+        <div id="Home" style={{ height: '100vh', padding: '20px' }}>
             <Grid container xs={10} className="margin_main" justifyContent="center" >
                 <Grid className="Name_sect" item xs={5}>
                     <BubbleEffect/>
                     <h2>HELLO___________</h2>
                     <h1>I AM SHUBHAM CHIKANE</h1>
+                    <Grid>
                     <span className="des_clr"><b>FRONTEND DEVELOPER ^_^💻</b></span><br/>
+                    </Grid>
                     <LayoutButton>
                         <Button onClick={() => downloadResume()}  className="btn_color">Resume</Button>
-                    <Button href={''}  className="btn_color" onClick={() => onClickContact()}>Contact</Button>
+                    <Button className="btn_color" onClick={() => onClickContact()}>Contact</Button>
                     </LayoutButton>
                 </Grid>
                 <ResumeModal isOpen={isModalOpen}/>

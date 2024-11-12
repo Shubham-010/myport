@@ -8,7 +8,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ContactInfo from './Component/ContactInfo';
 import Project from './Component/Project';
 import { BiCertification } from 'react-icons/bi';
-import AboutMe from './AboutMe';
+import AboutMe from './Component/AboutMe';
+import Exp1 from './Component/Exp';
 
 
 function App() {
@@ -18,10 +19,18 @@ function App() {
     {/* <FirstPl/> */}
     <BrowserRouter>
       <Routes>
-        <Route path='/' Component={FirstPl}>Home</Route>
+      <Route path='/' element={ 
+            <>
+              <FirstPl />
+              <Exp1/>
+              <Project />
+              <AboutMe />
+              <ContactInfo />
+            </>}/>
+        {/* <Route path='/' Component={FirstPl}>Home</Route>
         <Route path='/Contact' Component={ContactInfo}/>
         <Route path='/Project' Component={Project}/>
-          <Route path='/AboutMe' Component={AboutMe}/>
+          <Route path='/AboutMe' Component={AboutMe}/> */}
       </Routes>
     </BrowserRouter>
     <Footer/>
