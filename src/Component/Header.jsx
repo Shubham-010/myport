@@ -36,27 +36,27 @@ export default function Headers() {
                     <nav style={{padding:"10px"}}>
                         <Button className='h_btn'>
                             <Link to="Home" smooth={true} duration={500}>
-                                Home
+                                <b>Home</b>
                             </Link>
                         </Button>
                         <Button className='h_btn'>
                             <Link to="exp" smooth={true} duration={500}>
-                                Experience
+                                <b>Experience</b>
                             </Link>
                         </Button>
                         <Button className='h_btn'>
                             <Link to="Project" smooth={true} duration={500}>
-                                Projects
+                                <b> Projects </b>
                             </Link>
                         </Button>
                         <Button className='h_btn'>
                             <Link to="AboutMe" smooth={true} duration={500}>
-                                About
+                                <b>About</b>
                             </Link>
                         </Button>
                         <Button className='h_btn'>
                             <Link to="Contact" smooth={true} duration={500}>
-                                Contact
+                                <b>Contact</b>
                             </Link>
                         </Button>
                     </nav>

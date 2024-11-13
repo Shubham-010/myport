@@ -10,6 +10,7 @@ import Project from './Component/Project';
 import { BiCertification } from 'react-icons/bi';
 import AboutMe from './Component/AboutMe';
 import Exp1 from './Component/Exp';
+import Scrolltop from './scollup';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
               <Project />
               <AboutMe />
               <ContactInfo />
+              <Scrolltop/>
             </>}/>
         {/* <Route path='/' Component={FirstPl}>Home</Route>
         <Route path='/Contact' Component={ContactInfo}/>

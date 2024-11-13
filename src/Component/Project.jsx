@@ -45,10 +45,16 @@ const useStyles = makeStyles((theme) => ({
 export default function Project() {
     const classes = useStyles();
 
+    const openurl=(item)=>{
+      window.open(item.url)
+    }
+
     const projectLinks = [
-        { label: 'Time Calculator', Id: 'timecalc', img: Proi1 },
-        { label: 'Accordion', Id: 'accordion', img: Proi2 },
-        { label: 'Nature', Id: 'nature', img: Proi3 },
+        {
+            label: 'TOLIST', Id: 'timecalc', img: Proi1, url: 'https://sdctodolist.vercel.app/'},
+        {
+            label: 'Time Calculator', Id: 'accordion', img: Proi2, url: 'https://gotimesa.netlify.app' },
+        { label: 'Nature', Id: 'nature', img: Proi3, url: 'https://natureweb1999.vercel.app/' },
     ];
 
     return (
@@ -77,8 +83,8 @@ export default function Project() {
                             </CardContent>
                         </CardActionArea>
                         <CardActions>
-                            <Button size="small" color="primary">
-                                Demo
+                            <Button onClick={()=>openurl(item)} size="small" color="primary">
+                               DEMO
                             </Button>
                             <Button size="small" color="primary">
                                Git
