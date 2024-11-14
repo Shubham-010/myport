@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import Headers from './Component/Header';
 import FirstPl from './Component/FirstP';
 import Footer from './Component/Footer';
@@ -11,15 +11,21 @@ import { BiCertification } from 'react-icons/bi';
 import AboutMe from './Component/AboutMe';
 import Exp1 from './Component/Exp';
 import Scrolltop from './scollup';
+import { ThemeProvider } from './ThemeChanger';
+import ThemeToggleButton from './ThemeBut';
 
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const toggleTheme = () => setIsDarkMode((prevMode) => !prevMode);
   return (
+   <ThemeProvider>
+      <div className='app-container '>
     <Fragment>
     <Headers/>
     {/* <FirstPl/> */}
     <BrowserRouter>
-      <Routes>
+      <Routes>  
       <Route path='/' element={ 
             <>
               <FirstPl />
@@ -29,14 +35,12 @@ function App() {
               <ContactInfo />
               <Scrolltop/>
             </>}/>
-        {/* <Route path='/' Component={FirstPl}>Home</Route>
-        <Route path='/Contact' Component={ContactInfo}/>
-        <Route path='/Project' Component={Project}/>
-          <Route path='/AboutMe' Component={AboutMe}/> */}
       </Routes>
     </BrowserRouter>
     <Footer/>
     </Fragment>
+    </div>
+    </ThemeProvider>
   )
 }
 

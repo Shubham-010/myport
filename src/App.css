@@ -107,6 +107,7 @@ size: 10%;
 
 
 
+
  /* ---------Contact Form Css------------------- */
  .contact-form {
    width: 80%;
@@ -158,6 +159,13 @@ size: 10%;
    color: black;
  }
 
+ .btn_1{
+  margin: 16px 0;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+ }
+
  .error {
    color: red;
    font-size: 14px;
@@ -168,12 +176,65 @@ size: 10%;
   justify-content: 'space-around' !important;
 }
 
+.l_v100{
+      height: 100vh;
+      padding: 20px;
+}
+/* -----------------AboutMe----------------------- */
+.wrapSkills {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill_card{
+  border: 1px solid #000000;
+  box-shadow: grey 4px 5px 7px 1px;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10%;
+  /* max-width: 120px; */
+}
+.skill_card:hover{
+  border: 1px solid #58e9ee;
+  background-color: rgb(182, 221, 236); 
+}
+/* ---------------------------------------- */
+.rows{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
 .footer_pr{
         position:fixed; 
         bottom: 0; 
         z-index: 999;
         width: 100%; 
         background-color:rgb(86, 166, 190);
+}
+
+.thembtn{
+  border-radius: 20%;
+  border: 1px solid black;
+}
+
+.blendMode{
+  mix-blend-mode: multiply;
+  /* filter: brightness(0) invert(1); */
+}
+/* Dark theme */
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg-color: #333333;
+}
+
+/* Apply CSS variables */
+body,
+.app-container {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 @media (prefers-reduced-motion: no-preference) {

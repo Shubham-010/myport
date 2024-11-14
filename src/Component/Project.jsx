@@ -73,7 +73,7 @@ export default function Project() {
                                 image={item.img} // Use your own image path
                                 title={item.label}
                             />
-                            <CardContent>
+                            <CardContent style={{height:'5rem'}}>
                                 <Typography gutterBottom variant="h5" component="h2">
                                     {item.label}
                                 </Typography>

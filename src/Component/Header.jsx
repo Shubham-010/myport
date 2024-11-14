@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import TemporaryDrawer from './Drawer';
 import { Link } from 'react-scroll';
+import ThemeToggleButton from '../ThemeBut';
 // import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles((theme) => ({
@@ -58,6 +59,11 @@ export default function Headers() {
                             <Link to="Contact" smooth={true} duration={500}>
                                 <b>Contact</b>
                             </Link>
+                        </Button>
+                        <Button>
+                        <div>
+                           <ThemeToggleButton/>
+                        </div>
                         </Button>
                     </nav>
                 </Toolbar>

@@ -30,14 +30,14 @@ export default function FirstPl(params) {
         link.click();
     }
     return(
-        <div id="Home" style={{ height: '100vh', padding: '20px' }}>
+        <div id="Home" className='l_v100'>
             <Grid container xs={10} className="margin_main" justifyContent="center" >
                 <Grid className="Name_sect" item xs={5}>
                     <BubbleEffect/>
-                    <h2>HELLO___________</h2>
+                    <h2>HELLO 👋</h2>
                     <h1>I AM SHUBHAM CHIKANE</h1>
                     <Grid>
-                    <span className="des_clr"><b>FRONTEND DEVELOPER ^_^💻</b></span><br/>
+                        <Grid><span className="des_clr"><b>FRONTEND DEVELOPER ^_^💻</b></span></Grid><br/>
                     </Grid>
                     <LayoutButton>
                         <Button onClick={() => downloadResume()}  className="btn_color">Resume</Button>
@@ -45,7 +45,7 @@ export default function FirstPl(params) {
                     </LayoutButton>
                 </Grid>
                 <ResumeModal isOpen={isModalOpen}/>
-                <Grid item  xs={5}><img className="width_100" src={myimage}></img></Grid>       
+                <Grid item  xs={5}><img className="width_100 blendMode" src={myimage}></img></Grid>       
             </Grid>
         </div>
     )

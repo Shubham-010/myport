@@ -4,7 +4,7 @@ import { grey } from "@material-ui/core/colors";
 
 export default function Exp(){
     return(
-    <div id="exp" style={{ height: '100vh', padding: '10px' }}>
+        <div id="exp" className='l_v100'>
         <Grid xs={12} container> 
     <Grid xs={5}>
             <img className="width_100" src={proimg}></img>
