@@ -17,6 +17,7 @@
 .des_clr{
 color: #863e9c;
 size: 10%;
+
 }
 
 .h_btn{
@@ -104,9 +105,55 @@ size: 10%;
    opacity: 1;
  }
  /* ---------------------------- */
+ /* ----------FirstP CSS------------------ */
+
+ .mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#Home{
+  margin-top: 3%;
+}
+
+.Name_sect h2,
+.Name_sect h1,
+.Name_sect h3{
+  text-align: center;
+}
 
 
 
+@media (max-width: 600px) {
+  #Home {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .Name_sect h2,
+  .Name_sect h1 {
+    font-size: 1.5rem;
+    
+  }
+
+  .width_100 {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn_color {
+    margin: 5px 0;
+    
+  }
+
+  .mobile-img {
+    margin-top: 20px;
+    
+  }
+} 
 
  /* ---------Contact Form Css------------------- */
  .contact-form {
@@ -181,22 +228,37 @@ size: 10%;
       padding: 20px;
 }
 /* -----------------AboutMe----------------------- */
-.wrapSkills {
+/* .wrapSkills {
   display: flex;
   justify-content: space-between;
-}
+} */
 
+.wrapSkills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
 .skill_card{
   border: 1px solid #000000;
   box-shadow: grey 4px 5px 7px 1px;
   margin: 5px;
   padding: 10px;
-  border-radius: 10%;
+  /* border-radius: 10%; */
+      border-radius: 8px;
+      /* background-color: #f1f1f1; */
   /* max-width: 120px; */
 }
 .skill_card:hover{
   border: 1px solid #58e9ee;
   background-color: rgb(182, 221, 236); 
+}
+
+@media (max-width: 600px) {
+  .wrapSkills {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 /* ---------------------------------------- */
 .rows{
@@ -220,7 +282,7 @@ size: 10%;
 }
 
 .blendMode{
-  mix-blend-mode: multiply;
+  /* mix-blend-mode: multiply; */
   /* filter: brightness(0) invert(1); */
 }
 /* Dark theme */

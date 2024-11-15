@@ -40,6 +40,15 @@ const useStyles = makeStyles((theme) => ({
     media: {
         height: 140,
     },
+    header: {
+        color: "rgb(86, 166, 190)",
+        padding: theme.spacing(4),
+        backgroundSize: 'cover',
+        textAlign: 'center',
+        color: '#fff',
+        fontWeight: 'bold',
+        fontSize: '2rem',
+    },
 }));
 
 export default function Project() {
