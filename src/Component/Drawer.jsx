@@ -13,6 +13,7 @@ import { cilList, cilShieldAlt } from '@coreui/icons';
 import { Grid } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from 'react-scroll';
 // import InboxIcon from '@material-ui/icons/MoveToInbox';
 // import MailIcon from '@material-ui/icons/Mail';
 
@@ -25,19 +26,20 @@ const useStyles = makeStyles({
     },
 });
 
-export default function TemporaryDrawer() {
+export default function TemporaryDrawer(NavData) {
     const classes = useStyles();
     const [state, setState] = React.useState({
         left: false,
     });
-
     const toggleDrawer = (anchor, open) => (event) => {
+
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
             return;
         }
 
         setState({ ...state, [anchor]: open });
     };
+
 
     const list = (anchor) => (
         <div
@@ -49,10 +51,14 @@ export default function TemporaryDrawer() {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
+                {NavData.data.map((text, index) => (
+                    console.log(text,"text"),
+                    <ListItem button key={index}>
                         <ListItemIcon></ListItemIcon>
-                        <ListItemText primary={text} />
+                            <Link to={text.to} onClick={toggleDrawer(anchor, false)}smooth={true} duration={500}>
+                            <ListItemText primary={text.title} />
+                                    {/* {text.title} */}
+                                </Link>
                     </ListItem>
                 ))}
             </List>
