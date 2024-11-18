@@ -24,9 +24,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 const NavData = [
     {title:"Home",to:"Home"},
+    { title: "AboutMe", to:"AboutMe"},
     {title:"Experience", to:"exp"},
     {title:"Project", to:"Project"},
-    { title: "AboutMe", to:"AboutMe"},
     {title:"Contact", to:"Contact"},
 ]
 
@@ -51,7 +51,7 @@ export default function Headers() {
                         <nav style={{ padding: "10px" }}>
                             <Button key={index} className='h_btn'>
                                 <Link to={item.to} smooth={true} duration={500}>
-                                    {item.title}
+                                        <b>{item.title}</b>
                                 </Link>
                             </Button>
                         </nav>

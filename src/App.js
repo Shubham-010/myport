@@ -29,9 +29,9 @@ function App() {
       <Route path='/' element={ 
             <>
               <FirstPl />
+              <AboutMe />
               <Exp1/>
               <Project />
-              <AboutMe />
               <ContactInfo />
               <Scrolltop/>
             </>}/>

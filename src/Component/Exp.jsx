@@ -3,6 +3,7 @@ import proimg from '../Image/proimgBR.png';
 
 export default function Exp() {
     return (
+        <Grid>
         <div id="exp" className="l_v100">
             <Grid container spacing={3} alignItems="center" justifyContent="center">
                 {/* Image Section */}
@@ -47,5 +48,6 @@ export default function Exp() {
                 </Grid>
             </Grid>
         </div>
+        </Grid>
     );
 }

@@ -21,7 +21,7 @@ import Bann  from '../Image/BannerProj.jpg';
 const useStyles = makeStyles((theme) => ({
     gridContainer: {
         padding: theme.spacing(4),
-        backgroundColor:'rgb(181, 230, 245)'
+        backgroundColor:'"var(--bg1-color)"'
     },
     cardWrapper: {
         display: 'flex',

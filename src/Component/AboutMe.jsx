@@ -6,10 +6,11 @@ import { SiRedux } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
 import { TiHtml5 } from "react-icons/ti";
 import { MdCss } from "react-icons/md";
+import { lightBlue } from "@material-ui/core/colors";
 
 export default function AboutMe() {
     return (
-        <div id='AboutMe' className='l_v100'>
+        <div id='AboutMe' className='l_v100' style={{ backgroundColor:"var(--bg1-color) "}}>
             <h1>About Me 👨‍💻!!</h1>
             <Grid container spacing={3}>
                 <Grid item xs={12} md={6}>

@@ -14,7 +14,7 @@ export default function ContactInfo() {
             style={{
                 minHeight: "100vh",
                 padding: "20px",
-                backgroundColor: "rgb(181, 230, 245)",
+                backgroundColor: "white",
             }}
             spacing={3}
         >

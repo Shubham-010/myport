@@ -30,6 +30,7 @@ export default function FirstPl() {
     }
 
     return (
+        <Grid>
         <div id="Home" className='l_v100'>
             <Grid container xs={12} justifyContent="center" alignItems="center" spacing={3}>
                 <Grid item xs={12} sm={5} className="Name_sect" style={{ textAlign: isSmallScreen ? 'center' : 'left' }}>
@@ -48,5 +49,6 @@ export default function FirstPl() {
                 </Grid>
             </Grid>
         </div>
+        </Grid>
     );
 }
