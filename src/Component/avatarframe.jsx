@@ -1,10 +1,11 @@
 import React from 'react';
 import '../App.css'; 
 import img1 from '../Image/ShprofileimgBR.png'
+import { Grid } from '@material-ui/core';
 
 const AvatarFrame = ({ imageUrl, altText, size = '270px', borderColor = '#4c93af' }) => {
   return (
-    <div>
+    <Grid>
     <div 
       className="avatar-frame" 
       style={{
@@ -26,7 +27,7 @@ const AvatarFrame = ({ imageUrl, altText, size = '270px', borderColor = '#4c93af
         }}
       />
     </div>
-      </div>
+      </Grid>
   );
 };
 

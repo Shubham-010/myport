@@ -21,7 +21,8 @@ import Bann  from '../Image/BannerProj.jpg';
 const useStyles = makeStyles((theme) => ({
     gridContainer: {
         padding: theme.spacing(4),
-        backgroundColor:'"var(--bg1-color)"'
+        backgroundColor:'var(--bg1-color)'
+        // backgroundColor:'lightblue'
     },
     cardWrapper: {
         display: 'flex',
@@ -67,7 +68,7 @@ export default function Project() {
     ];
 
     return (
-        <Grid container id="Project" style={{ height: '100vh', padding: '20px' }} className={classes.gridContainer} justifyContent="center">
+        <Grid container id="Project" className={`${"l_v100"} ${classes.gridContainer}`} justifyContent="center">
             <Grid item xs={12}>
                 <Paper elevation={3} className={classes.cardWrapper}>
                     <h1 style={{ color: "rgb(86, 166, 190)", backgroundImage:Bann }}>Projects</h1>

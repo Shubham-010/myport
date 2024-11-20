@@ -37,7 +37,7 @@ export default function FirstPl() {
                     <BubbleEffect />
                     <h2>HELLO 👋</h2>
                     <h1>I AM SHUBHAM CHIKANE</h1>
-                    <h3 className="des_clr"><b>FRONTEND DEVELOPER ^_^💻</b></h3><br />
+                        <h3 className="des_clr"><b>FRONTEND DEVELOPER ^_^💻</b></h3><br />
                     <LayoutButton>
                         <Button onClick={downloadResume} className="btn_color">Resume</Button>
                         {/* <Button className="btn_color" onClick={onClickContact}>Contact</Button> */}

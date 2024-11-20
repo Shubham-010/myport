@@ -227,6 +227,7 @@ size: 10%;
       height: 100vh;
       padding: 20px;
 }
+
 /* -----------------AboutMe----------------------- */
 /* .wrapSkills {
   display: flex;
@@ -259,8 +260,17 @@ size: 10%;
   .wrapSkills {
     flex-direction: column;
     align-items: center;
+    color: #000000;
+  }
+  .l_v100 {
+      padding: 20px;
+      height: 50%;
   }
 }
+
+/* ------------span digital effect---------------------- */
+
+/* ---------------------------------- */
 /* ---------------------------------------- */
 .rows{
   display: grid;
@@ -293,7 +303,7 @@ size: 10%;
   --card-bg-color: #333333;
 }
 .light-mode{
-    --bg1-color:rgb(166, 222, 229);
+    --bg1-color:#57a0b2;
 }
 
 /* Apply CSS variables */

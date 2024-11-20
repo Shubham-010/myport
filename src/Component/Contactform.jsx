@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import { Button } from 'react-scroll';
+import emailjs from 'emailjs-com'
+import Swal from 'sweetalert2';
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [errors, setErrors] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const firstName_ref =  useRef();
 
     // Handle input change
     const handleChange = (e) => {
@@ -23,6 +27,68 @@ const ContactForm = () => {
         if (!formData.message) newErrors.message = 'Message is required';
         return newErrors;
     };
+    const sentEmail = (e) =>{
+        if (formData.name === "") {
+                Swal.fire({
+                    title: "Error.",
+                    text: "Name cannot be empty!",
+                    icon: 'error',
+                }).then(() => {
+                    firstName_ref.current?.focus();
+                })
+                return;
+            }
+        else if (formData.email === "") {
+                Swal.fire({
+                    title: "Error.",
+                    text: "Email cannot be empty!",
+                    icon: 'error',
+                });
+                return;
+            }
+        else if (formData.message === "") {
+                Swal.fire({
+                    title: "Error.",
+                    text: "Message cannot be empty!",
+                    icon: 'error',
+                });
+                return;
+            }
+
+            // Using EmailJS to send the email
+            const templateParams = {
+                from_name: formData.name,
+                user_mail: formData.email,
+                to_name:"Shubham",
+                message: formData.message,
+            };
+
+            emailjs.send(
+                'service_3lv64y9', // Replace with your service ID
+                'template_1hzkbza', // Replace with your template ID
+                templateParams,
+                'TsCG_N6MdJSCXZxAA'
+                // Replace with your user ID from EmailJS
+            )
+                .then((response) => {
+                    Swal.fire({
+                        title: "Success!",
+                        text: "Your response has been submitted.",
+                        icon: 'success',
+                    }).then(() => {
+                        // setFirstName('');
+                        // setemail('');
+                        // setmessage('');
+                        setFormData({ name: '', email: '', message: '' })
+                    });
+                }, (err) => {
+                    Swal.fire({
+                        title: "Error.",
+                        text: "Something went wrong while sending your message.",
+                        icon: 'error',
+                    });
+                });
+    }
 
     // Handle form submission
     const handleSubmit = (e) => {
@@ -42,7 +108,10 @@ const ContactForm = () => {
         <div className="contact-form">
             <h2>Contact Us</h2>
             {isSubmitted ? (
+                <>
                 <p>Thank you for your message! We'll be in touch soon.</p>
+                <Button>Return</Button>
+                </>
             ) : (
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
@@ -52,6 +121,7 @@ const ContactForm = () => {
                             id="name"
                             name="name"
                             value={formData.name}
+                            ref={firstName_ref}
                             onChange={handleChange}
                         />
                         {errors.name && <p className="error">{errors.name}</p>}
@@ -80,7 +150,7 @@ const ContactForm = () => {
                         {errors.message && <p className="error">{errors.message}</p>}
                     </div>
 
-                        <button className='button1' type="submit">Submit</button>
+                        <Button className='button1' onClick={()=>{sentEmail()}} type="submit">Submit</Button>
                 </form>
             )}
         </div>
